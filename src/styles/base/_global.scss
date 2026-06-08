@@ -1,0 +1,24 @@
+:focus-visible {
+  outline-offset: 0.2rem;
+}
+
+:target {
+  scroll-margin-block: 6vb;
+}
+
+a[class=""] {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

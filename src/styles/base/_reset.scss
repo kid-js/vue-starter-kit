@@ -1,0 +1,102 @@
+/* * * * * * * * * * * /
+/ * Reset & Normalize * /
+/ * * * * * * * * * * */
+
+@layer base {
+  :root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+    font-synthesis: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :where([hidden]:not([hidden="until-found"])) {
+    display: none !important;
+  }
+
+  :where(html) {
+    block-size: 100%;
+    scrollbar-gutter: stable;
+  }
+
+  :where(body) {
+    font-family: system-ui, sans-serif;
+    min-block-size: 100svb;
+  }
+
+  :where(
+    body, h1, h2, h3, h4, h5, h6, p,
+    button, input, select, textarea,
+    blockquote, figure, dl, dd
+  ) {
+    padding: 0;
+    margin: 0;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+  }
+
+  :where(ul, ol):where([class]) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  :where(button, input, select, textarea) {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+  }
+
+  :where(canvas, img, picture, svg, video) {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  :where(button, label, select, [role="button"]) {
+    cursor: pointer;
+  }
+
+  :where(a) {
+    color: inherit;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+  }
+
+  :where(:disabled) {
+    cursor: not-allowed;
+  }
+
+  svg { max-inline-size: 100%; }
+  svg * { transition-property: fill, stroke; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html,
+    :has(:target) {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

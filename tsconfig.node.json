@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2023",
+    "module": "ESNext",
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "#build/ui": ["./node_modules/.nuxt-ui/ui"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "skipLibCheck": true,
+    "erasableSyntaxOnly": true,
+    "noUncheckedSideEffectImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "6.0"
+  },
+  "include": [
+    "vite.config.ts",
+    "stylelint.config.ts",
+    "commitlint.config.ts",
+    "eslint.config.ts",
+    "ui.config.ts",
+  ]
+}

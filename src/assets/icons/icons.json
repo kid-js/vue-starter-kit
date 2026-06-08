@@ -1,0 +1,19 @@
+{
+  "prefix": "lucide",
+  "width": 24,
+  "height": 24,
+  "icons": {
+    "eye": {
+      "body": "\u003Cg fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\u003E\u003Cpath d=\"M2.062 12.348a1 1 0 0 1 0-.696a10.75 10.75 0 0 1 19.876 0a1 1 0 0 1 0 .696a10.75 10.75 0 0 1-19.876 0\"/\u003E\u003Ccircle cx=\"12\" cy=\"12\" r=\"3\"/\u003E\u003C/g\u003E"
+    },
+    "eye-closed": {
+      "body": "\u003Cpath fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m15 18l-.722-3.25M2 8a10.645 10.645 0 0 0 20 0m-2 7l-1.726-2.05M4 15l1.726-2.05M9 18l.722-3.25\"/\u003E"
+    },
+    "x": {
+      "body": "\u003Cpath fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M18 6L6 18M6 6l12 12\"/\u003E"
+    },
+    "loader-circle": {
+      "body": "\u003Cpath fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 12a9 9 0 1 1-6.219-8.56\"/\u003E"
+    }
+  }
+}
