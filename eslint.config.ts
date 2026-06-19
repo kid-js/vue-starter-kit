@@ -160,6 +160,7 @@ const eslintConfig = defineConfigWithVueTs(
     languageOptions: {
       parser: parserHtml,
     },
+    extends: [vueTsConfigs.disableTypeChecked],
     rules: {
       '@html-eslint/attrs-newline': ['error', {
         ifAttrsMoreThan: 5,
