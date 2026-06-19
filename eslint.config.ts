@@ -171,6 +171,12 @@ const eslintConfig = defineConfigWithVueTs(
       }],
     },
   },
+
+  // json rules
+  {
+    files: ['*.json', 'src/**/*.json'],
+    extends: [vueTsConfigs.disableTypeChecked],
+  },
 )
 
 export default eslintConfig
