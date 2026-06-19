@@ -3,13 +3,26 @@ import type { IUserData } from '@/pages/user/types'
 
 import { HAS_SESSION_KEY, REFRESH_TOKEN_KEY } from '@/shared/constants'
 
-export const useAuthStore = defineStore('auth', () => {
-  // state
+const useAuthPrivateStore = defineStore('auth-private', () => {
+  // private state
   const _isAuth: Ref<boolean> = ref(false)
   const _user: Ref<IUserData | null> = ref(null)
   const _accessToken: Ref<string | null> = ref(null)
   const _hasSession: Ref<string | null> = ref(localStorage.getItem(HAS_SESSION_KEY))
   const _refreshToken: Ref<string | null> = ref(localStorage.getItem(REFRESH_TOKEN_KEY))
+
+  return {
+    _refreshToken,
+    _accessToken,
+    _hasSession,
+    _isAuth,
+    _user,
+  }
+})
+
+export const useAuthStore = defineStore('auth', () => {
+  const authPrivateStore = useAuthPrivateStore()
+  const { _isAuth, _user, _accessToken, _hasSession, _refreshToken } = storeToRefs(authPrivateStore)
 
   // getters
   const refreshToken: ComputedRef<string | null> = computed(() => _refreshToken.value)
