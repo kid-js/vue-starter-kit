@@ -1,9 +1,9 @@
 # Vue.js Starter-kit
 
-**Tech stack**: Vue 3 + TypeScript + Vite + Pinia + Vue-router + Nuxt UI + Ky + Valibot  
+**Tech stack**: Vue 3 + TS + Vite + Pinia + Vue-router + SASS + Nuxt UI + Ky + Valibot  
 **Code quality**: ESLint + Stylelint + Commitlint + Husky  
   
-The Starter Kit provides everything needed to quickly bootstrap small and medium-sized single-page applications (SPAs). It comes with a built-in API layer, user authentication, modal and notification systems, and form validation out of the box.  
+The Starter Kit provides everything needed to quickly bootstrap small and medium-sized single-page applications. It comes with a built-in API layer, user auth, modal and notification systems, and form validation out of the box.  
 
 ## Requirements
 
