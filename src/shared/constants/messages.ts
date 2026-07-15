@@ -7,3 +7,6 @@ export const RESTORE_SESSION_ERROR_MESSAGE = 'Failed to restore user session.'
 // system messages: modals
 export const MODAL_CLOSE_ERROR_MESSAGE = 'Error occurred while closing the modal window.'
 export const MODAL_NOT_FOUND_MESSAGE = 'Modal window was not found in the registry.'
+
+// credentials
+export const WRONG_CREDENTIALS_MESSAGE = 'Неверный email или пароль'

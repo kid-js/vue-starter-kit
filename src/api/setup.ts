@@ -23,12 +23,7 @@ let _toast: Toast
  */
 const getRouter = (): Router => {
   if (!_router) {
-    try {
-      throw new Error(ROUTER_GETTER_ERROR_MESSAGE)
-    }
-    catch (error) {
-      console.error(error)
-    }
+    console.error(ROUTER_GETTER_ERROR_MESSAGE)
   }
   return _router
 }

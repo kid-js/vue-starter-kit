@@ -7,6 +7,7 @@ import { Users } from '@/api/services/users'
 import {
   RESTORE_SESSION_ERROR_MESSAGE,
   LOAD_USER_DATA_ERROR_MESSAGE,
+  WRONG_CREDENTIALS_MESSAGE,
   LOGOUT_ERROR_MESSAGE,
   PATH_DEFAULT,
 } from '@/shared/constants'
@@ -31,6 +32,7 @@ const isSilentUpdate: Ref<boolean> = ref(false)
 let _restorePromise: Promise<boolean> | null = null
 
 export const useAuth = (): IUseAuth => {
+  const toast = useToast()
   const route = useRoute()
   const router = useRouter()
   const authStore = useAuthStore()
@@ -51,8 +53,11 @@ export const useAuth = (): IUseAuth => {
       }
     }
     catch (error) {
+      toast.add({
+        title: WRONG_CREDENTIALS_MESSAGE,
+        color: 'error',
+      })
       console.error(error)
-      // TODO: toast
     }
     finally {
       isAuthLoading.value = false

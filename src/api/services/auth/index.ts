@@ -16,7 +16,7 @@ export const Auth = {
             access_token: 'access_token_89099056090',
             refresh_token: 'refresh_token_59906606889050',
           })
-        }, 1200)
+        }, 265)
       })
     }
 
